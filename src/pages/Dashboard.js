@@ -1,6 +1,7 @@
 import React from 'react'
 import { Nav } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -9,8 +10,9 @@ const Dashboard = () => {
         navigate("/");
     }
     return (
-        <div>Dashboard
+        <div>
             <Nav><button onClick={() => { handleLogout() }}>Logout</button></Nav>
+            <Header />
         </div>
     )
 }
